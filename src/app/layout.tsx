@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { ThemeProvider } from "next-themes"
+import { Toaster } from '@pheralb/toast';
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -16,8 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <ThemeProvider enableSystem attribute="class" disableTransitionOnChange defaultTheme="dark">
+        <ThemeProvider enableSystem attribute="class" disableTransitionOnChange >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

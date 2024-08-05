@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@irsyadadl/paranoid": "^1.4.12",
+    "@pheralb/toast": "^0.2.3",
     "@prisma/client": "^5.14.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
@@ -31,7 +32,7 @@
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.3"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.10",
