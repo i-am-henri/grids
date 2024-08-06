@@ -2,7 +2,7 @@
 
 import { toast } from "@pheralb/toast"
 import { useFormStatus } from "react-dom"
-import { KeySchema, z, ZodSchema, ZodTypeAny } from "zod"
+import { type ZodTypeAny, z } from "zod"
 
 interface Props extends React.HTMLAttributes<HTMLFormElement> {
     children: React.ReactNode,
@@ -21,19 +21,13 @@ export default function Form({ children, schema, data, ...props }: Props) {
 
     const ZodTypes: Record<string, ZodTypeAny> = {}
 
-    // TODO: fix this shit
-    for (const s in schema) {
-        const func = new Function("z", `return ${schema[s]}`)(z) as unknown
-        ZodTypes.s = func
-        console.log(func)
-    }
 
     return (
         <form {...props} action={async (e) => {
             const formData: Record<string, string> = {}
 
             for (const value in data) {
-                if (value.hasOwnProperty(value) && data[value]) {
+                if (value.hasOwn(value) && data[value]) {
                     formData.key = e.get(data[value]) as string
                 }
             }

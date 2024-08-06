@@ -1,11 +1,8 @@
 import Form from "@/components/forms/form";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { IconArrowRightFill, IconBrandGithub, IconFileText, IconSupport, IconVideoCam } from "@irsyadadl/paranoid";
 import Link from "next/link";
-import {IconArrowTriangleRight, IconBrandGithub, IconMail, IconMoneybag, IconMoneybagFill} from "@irsyadadl/paranoid"
 import { RegisterApiKey } from "./action";
-import { z } from "zod";
-
 /*
  * This is the start page. Here you can give the
  * client your api-key. Then you'll be redirected
@@ -14,22 +11,56 @@ import { z } from "zod";
  */
 export default function Start() {
   return (
-    <div className="min-h-dvh flex items-center justify-center">
-      <Form data={{
-        key: "key"
-      }} schema={{
-        key: "z.string()"
-      }} action={RegisterApiKey} className="space-y-2">
-        <h2 className="text-2xl">The minimal <Link className="" href={"https://selfmail.app"}>selfmail</Link> client.</h2>
-        <Input placeholder="Api key" />
-        <Button className="space-x-2 group" variant={"default"} size={"sm"}>
-          <p>Submit</p> <IconArrowTriangleRight className="h-4 w-4 group-hover:text-yellow-700 duration-300"  />
-        </Button>
-      </Form>
-      <footer className="absolute bottom-5 flex space-x-2">
-        <Link href="https://github.com/i-am-henri/grids" target="_blank"><IconBrandGithub /></Link>
-        <Link href="https://"><IconMail /></Link>
-      </footer>
+    <div className="lg:w-[900px]">
+      <div className="min-h-[80vh] flex items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:w-[600px] md:mx-auto w-full md:w-[800px] border">
+          <div className="flex items-center justify-center col-span-1 border-b border-r">
+            <h2 className="text-xl text-primary font-mono">grids.email</h2>
+          </div>
+          <div className="col-span-2 border-b">
+            <p className="px-5 py-2 text-neutral-300">Grids is a selfhosted email client that allows you to send and receive emails from your own domain with the selfmail api.</p>
+          </div>
+          <div className="space-y-2 col-span-2 border-r p-2">
+            <Form action={RegisterApiKey} data={{
+              key: "key"
+            }} schema={{
+
+            }} className="flex relative group items-center">
+              <Input placeholder="Api key" />
+              <div className="absolute right-2 flex items-center">
+                <IconArrowRightFill className="h-5 w-5 text-muted-foreground cursor-pointer group-focus-within:text-primary" type="submit" />
+              </div>
+            </Form>
+            <p className="text-muted-foreground leading-4 text-sm">You can get your api key from the <Link className="underline" href={"https://selfmail.app"}>selfmail</Link> website. Never share your api key with anyone. This is an official selfmail client.</p>
+          </div>
+          <div className="grid grid-cols-4">
+            <Link href="https://github.com/i-am-henri/grids" target="_blank" className="flex items-center justify-center border-r hover:bg-neutral-900"><IconBrandGithub className="h-7 w-7" /></Link>
+            <Link href="/docs" target="_blank" className="flex items-center justify-center border-r hover:bg-neutral-900"><IconFileText className="h-7 w-7" /></Link>
+            <Link href="/docs" className="flex items-center justify-center border-r hover:bg-neutral-900"><IconVideoCam className="h-7 w-7" /></Link>
+            <Link href="/contact" className="flex items-center justify-center hover:bg-neutral-900"><IconSupport className="h-7 w-7" /></Link>
+          </div>
+        </div>
+      </div >
+      <div className="grid grid-cols-4 border">
+        <div className="col-span-2 flex items-center justify-center border-b border-r">
+          <h2>grids.email</h2>
+        </div>
+        <div className="col-span-2 border-b">
+          <p>Hey</p>
+        </div>
+        <div className="border-r">
+          h
+        </div>
+        <div className="border-r">
+          h
+        </div>
+        <div className="border-r">
+          h
+        </div>
+        <div className="">
+          h
+        </div>
+      </div>
     </div>
   )
 }
