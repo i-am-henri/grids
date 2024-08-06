@@ -1,4 +1,5 @@
 import Form from "@/components/forms/form";
+import Slider from "@/components/home/slider";
 import { Input } from "@/components/ui/input";
 import { IconArrowRightFill, IconBrandGithub, IconFileText, IconSupport, IconVideoCam } from "@irsyadadl/paranoid";
 import Link from "next/link";
@@ -43,24 +44,23 @@ export default function Start() {
       </div >
       <div className="grid grid-cols-4 border">
         <div className="col-span-2 flex items-center justify-center border-b border-r">
-          <h2>grids.email</h2>
+          <h2 className="text-xl text-primary font-mono">Customizable!</h2>
         </div>
-        <div className="col-span-2 border-b">
-          <p>Hey</p>
+        <div className="col-span-2 border-b flex items-center justify-center p-2 text-muted-foreground">
+          <p>Minimalistic selfmail client, completely open source and customizable with a ton of themes and plugins.</p>
         </div>
-        <div className="border-r">
-          h
+        <Slider />
+        <div className="flex items-center justify-center border-b border-r">
+          <h2 className="text-xl text-primary font-mono">Client ?!</h2>
         </div>
-        <div className="border-r">
-          h
+        <div className="col-span-2 border-b flex items-center justify-center p-2 border-r">
+          <p className="text-muted-foreground">
+            This is a client for selfmail. This means, this is an alternative to the official selfmail frontend, in this case with a much cleaner design.
+          </p>
         </div>
-        <div className="border-r">
-          h
-        </div>
-        <div className="">
-          h
-        </div>
+
       </div>
+      <div className="h-24" />
     </div>
   )
 }
