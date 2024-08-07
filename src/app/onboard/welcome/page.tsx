@@ -1,6 +1,5 @@
 "use server"
 
-import React from "react";
 
 /**
  * The welcome page will be shown when the user is 
