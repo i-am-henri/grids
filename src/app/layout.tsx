@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="flex justify-center">
-        <ThemeProvider enableSystem defaultTheme="dark" attribute="class" disableTransitionOnChange >
+        <ThemeProvider enableSystem attribute="class" disableTransitionOnChange >
           {children}
           <Toaster />
         </ThemeProvider>

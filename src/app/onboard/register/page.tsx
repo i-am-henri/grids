@@ -1,7 +1,6 @@
 import Form from "@/components/forms/form";
 import { Input } from "@/components/ui/input";
 import { RegisterUser } from "./action";
-import { z } from "zod";
 
 export default function Register() {
     return (
@@ -12,7 +11,7 @@ export default function Register() {
                 password: "password"
             }} action={RegisterUser}>
                 <Input disabled type="email" value={"henri@selfmail.app"} />
-                <Input type="passwird" placeholder="your password" />
+                <Input type="passwo rd" placeholder="your password" />
             </Form>
         </div>
     )
