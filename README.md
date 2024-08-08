@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/selfmail/grids.email/main/public/page.png" alt="grids.email homepage screenshot" width="800" />
+  <img src="https://github.com/i-am-henri/grids/blob/main/public/page.png?raw=true" alt="grids.email homepage screenshot" width="800" />
   <h1 align="center">
     <a href="https://grids.email">grids.email - the selfmail client</a>
   </h1>
@@ -34,7 +34,7 @@
 ## Screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/selfmail/grids.email/main/public/page.png" alt="grids.email homepage screenshot" width="800" />
+  <img src="https://github.com/i-am-henri/grids/blob/main/public/page.png?raw=true" alt="grids.email homepage screenshot" width="800" />
   <img src="https://raw.githubusercontent.com/selfmail/grids.email/main/public/dashboard.png" alt="grids.email dashboard screenshot" width="800" />
 </p>
 
