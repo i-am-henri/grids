@@ -29,7 +29,7 @@ export default function Start() {
             }} schema={{
 
             }} className="flex relative group items-center">
-              <Input placeholder="Api key" />
+              <Input name="key" placeholder="Api key" />
               <button className="border-none absolute right-2 flex items-center" type="submit">
                 <IconArrowRightFill className="h-5 w-5 text-muted-foreground cursor-pointer group-focus-within:text-primary" />
               </button>

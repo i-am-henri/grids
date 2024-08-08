@@ -15,6 +15,8 @@ interface Props extends React.HTMLAttributes<HTMLFormElement> {
  * This is a default form which will return a toast in case of an 
  * error in the server action. It will also validate the given
  * data with the given zod schema.
+ * 
+ * TODO: implement client side validation
  */
 export default function Form({ children, schema, data, ...props }: Props) {
     const { pending } = useFormStatus()
@@ -26,10 +28,6 @@ export default function Form({ children, schema, data, ...props }: Props) {
             if (a) return toast.error({
                 text: "Internal Server Error",
                 description: a
-            })
-            toast.success({
-                text: "Success",
-                description: "You have successfully registered."
             })
         }} >
             {children}
